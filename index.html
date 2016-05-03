@@ -1,0 +1,965 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android and Java" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="唯代码和妹子不可辜负">
+<meta property="og:type" content="website">
+<meta property="og:title" content="oncealong's Notes">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="oncealong's Notes">
+<meta property="og:description" content="唯代码和妹子不可辜负">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="oncealong's Notes">
+<meta name="twitter:description" content="唯代码和妹子不可辜负">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Android and Java - oncealong's Notes - 唯代码和妹子不可辜负 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e1a5a5babf670a09ab2e056a95d43ebc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">oncealong's Notes</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Android and Java Notes</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'Uxu5NNr_zFuC68SdSEyW','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/03/Android 生命周期中每个函数适合处理的事件/" itemprop="url">
+                  Android 生命周期中每个函数适合处理的事件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-03T12:26:41+08:00" content="2016-05-03">
+              2016-05-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/03/Android 生命周期中每个函数适合处理的事件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/03/Android 生命周期中每个函数适合处理的事件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/03/Android 生命周期中每个函数适合处理的事件/" class="leancloud_visitors" data-flag-title="Android 生命周期中每个函数适合处理的事件">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Google官网给的Activity声明周期图:<br><img src="http://7xspji.com2.z0.glb.clouddn.com/blog/android/activity_lifecycle.png" alt="Activity声明周期"></p>
+<p>从这种图中,我们可以知道Activity生命周期是:<br>onCreate -&gt; onStart -&gt; onResume -&gt; onPause -&gt; onStop -&gt;onDestroy.<br>更详细一点就是 onCreate是ActivityA创建时调用, onStart是用户能看见ActivityA时调用(但是不可以交互), onResume是用户与ActivityA可交互时调用. 当另外一个ActivityB弹出(比如广告),遮盖住ActivityA一部分时, 调用ActivityA的OnPause方法(因为此时ActivityA不能交互了), 然后调用ActivityB的onCreate, onStart, onResume方法. 如果此时ActivityB整个遮盖住了ActivityA, 就会调用ActivityA的onStop方法(因为此时ActivityA不能看到了). 如果用户彻底退出应用, 就会执行ActivityA的 onDestroy方法.<br>再详细一点就要涉及到activity的状态了.因为一个activity有<a href="http://developer.android.com/guide/components/activities.html#Lifecycle" target="_blank" rel="external">三个状态</a>,分别为:</p>
+<ul>
+<li>Resumed</li>
+<li>Paused</li>
+<li>Stopped<br>通过调用onCreate, onStart, onResum, onPause, onStop, onDestroy就可以在这些状态间转换.</li>
+</ul>
+<p>但是在每个方法里,都适合做些什么任务呢?<br>在谷歌<a href="http://developer.android.com/reference/android/app/Activity.html" target="_blank" rel="external">官方文档</a>中,这样说道每个方法的作用:</p>
+<ol>
+<li>onCreate:<br>当activity第一次创建时调用.这里应该完成所有静态资源的建立, 比如使用setContentView(int)和布局资源定义你的UI视图, 使用findViewById(int)取出程序中需要交互的控件, 绑定数据.<br>此时视图还不存在,无法调用动画等.<br>还有需要注意, 每次activity启动, 不一定都会调用这个函数. 当当前activity只是被覆盖一部分, 当前activity再次可交互时,是只调用onResume方法, 不会调用onCreate方法.</li>
+<li>onStart:<br>这里不是activity对用户是否可见的最好的指示器</li>
+<li>onResume:<br>打开独占设备,如相机,在onPause中释放.</li>
+<li>onPause:<br>在这里系统将要离开当前Activity, 恢复其他activity. 用户在程序里做的任何改变都应该在此刻提交(通常用ContentProvide来保存数据). 还有需要在这里停止动画和其他耗费CPU的事件来确保转换到下一个activity的流畅度.<br>请记住:这个方法的实现必须很快完成, 不能占用太多时间, 因为在这个方法完成之前, 下一个activity不会恢复. 如果这个方法耗时较长, 就会影响用户体验. 如果对应的onPause()在500ms内还没有执行完，ActivityManagerService就会强制关闭这个Activity.<br>另外一个请记住的是:如果当前activity拥有独占资源(比如相机), 必须在这里释放, 以免在下一个activity中需要用到.</li>
+<li>onStop:<br>请注意: 在内存不足而导致系统无法保留此进程的情况下, onStop() 可能不会被执行。</li>
+</ol>
+<p>几乎所有Activity的子类,都会实现onCreate和onPause这两个方法.</p>
+<p>另一篇讲的很赞的文章:<br><a href="http://blog.csdn.net/zhao_3546/article/details/12843477" target="_blank" rel="external">http://blog.csdn.net/zhao_3546/article/details/12843477</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/03/My-second-text/" itemprop="url">
+                  My second text
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-03T09:17:57+08:00" content="2016-05-03">
+              2016-05-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/03/My-second-text/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/03/My-second-text/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/03/My-second-text/" class="leancloud_visitors" data-flag-title="My second text">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/24/PC是夕阳行业？你们图样图森破/" itemprop="url">
+                  PC是夕阳行业？你们图样图森破
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-24T11:09:43+08:00" content="2016-02-24">
+              2016-02-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/24/PC是夕阳行业？你们图样图森破/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/PC是夕阳行业？你们图样图森破/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/02/24/PC是夕阳行业？你们图样图森破/" class="leancloud_visitors" data-flag-title="PC是夕阳行业？你们图样图森破">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>长期下滑难免让人心生颓丧，但只有抓住市场结构变化机会，才能真正迎来PC的春天。<br>上一个季度，PC全球出货量再次迎来大幅下滑，这已是PC连续第五个季度下滑。业界一片哀鸿，全球前5大PC厂商中，只有少数品牌实现逆势增长，排名第一的联想当季营业额、税前利润均出现两位数下滑。<br>PC是夕阳行业？你们图样图森破<br>PC厂商或许进入到了生死攸关“淘汰赛”，IDC分析师汤姆·麦内利(TomMainelli)指出，在当前5到10名的厂商中，很可能会有两家退出市场。真的已经无可救药吗?去年最后一个季度的销售旺季，并没有刺激PC出现回升。<br>经过激烈的角逐，PC行业会不会随着部分厂商退出，回归到“利润回升，竞争格局相对稳定”的阶段？清华同方电脑市场部副总经理刘杰鹏向记者表示，这只是正常的行业规律和时间问题。<br>行业正常洗牌<br>“PC行业发展到现在正在经历价格战、低利润血拼阶段，但每个行业都会经历这个阶段，在我看来，这只是正常的竞争态势。”刘杰鹏表示。<br>根据IDC数据，2015年第四季度，全球个人电脑(PC)出货量同比下滑10.6%，跌至7190万台，创下了“历史新纪录”。Gartner公布的数据是8.3%。<br>不过，IDC预计全球PC市场将于2016年见底，全年降幅缩小至1.1%.<br>助推PC市场见底的因素是最新技术应用叠加的“换机潮”，英特尔推出了最新的第六代酷睿处理器，微软新的Windows10操作系统已上线，加上4K显示屏等新技术，将大幅提升PC性能和体验。此外，从2012到2016年，PC经历了连续五年的放缓过程，如果说该离开的用户都已经离开，使用6年的机器到了更新换代期，PC整体市场难以大幅下跌。<br>但这并不意味着所有PC厂商都能度过难关。Gartner数据显示，2015年，前六大厂商在整体PC市场的占有率更见提升，达73.1%，高于2014年的70.4%。<br>谁“毁”了PC产业？或许“毁”掉PC产业的是一种模式，为追求市场占有率和销量而不断拉低利润，以价格战恶化行业生态的模式。2012到2013财年，联想的日子仍然相当好过，当年毛利率达到12%，然而到截至2015年12月31日的这个财季，联想毛利率已降至5%。<br>或许只有经过激烈洗牌导致大量玩家出局，市场才会恢复平衡。汽车产业一度和PC产业现状类似，最终市场回到了少数几家厂商手中。<br>“在当前市场形势下，巨头的份额无疑也受到影响，加上华为进入，一些巨头也可能感到‘焦灼’，但市场的下滑实际并不影响这些巨头在全球的垄断地位，市场只会越来越集中。在我看来，日本的一家PC厂商，出局是确定的。”刘杰鹏说。<br>一个“夕阳产业”?<br>事实上，虽然整体市场仍未结束下滑，在PC部分局部市场却出现逆势增长。<br>“我们看到，消费信息的(PC)终端产品形态发生了变化，但生产信息的终端需求反而是越来越大了。”刘杰鹏说。<br>大量机会出现在商用PC领域。“部分用户对于类工作站的个人电脑需求还是很强劲，例如自媒体、设计工作者、游戏开发者。这确实也给我们提出一些挑战，对性能、外观、散热提出更高的要求。”刘杰鹏说。<br>商用PC也有细分领域，例如，在教育市场，对以服务器+云盒子新模式的需求强劲。而针对部分只需处理简单功能的“窗口行业”，例如呼叫中心，此类行业对特殊PC的需求也在增加。普通计算机方面，“拥有信息安全属性的产品，在政府、金融、军队的采购，一定会有很好的市场份额，只是不好预测产生质变的时间点。”刘杰鹏告诉记者。<br>“PC走到了一个十字路口，”刘杰鹏说，“标准化的PC是巨头的天下，而且会越来越集中。但面对细分市场需求的PC厂商，还会活得很好。”实际上，即使在不被人们看好的个人PC领域，针对游戏群体开发的PC，其需求也在上升，而这类PC也拥有不错的利润。<br>“我们认为移动办公领域的需求不会消亡，会一直存在，并且这种需求会越来越强烈。”华为移动宽带与家庭事业部的总裁杨志荣在出席MateBook新品发布时也表示。<br>新进入PC行业的华为也在反思传统PC盛衰。杨志荣说：“原来传统的PC是一个负循环，拼命压成本、压价格，把质量做差，消费者觉得这个产品5年是一个样子，没有兴趣换代，这样消费者不买单，厂家更没钱。现在最重要是让这个行业进入正循环，首先在产品这块，要进行创新。”</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xspji.com2.z0.glb.clouddn.com/pic/me/wqDH.jpg"
+               alt="oncealong" />
+          <p class="site-author-name" itemprop="name">oncealong</p>
+          <p class="site-description motion-element" itemprop="description">唯代码和妹子不可辜负</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">oncealong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"oncealong"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("qymmpAoyueF7aAowfLPMosXl-gzGzoHsz", "BE8jyDxa8Pyx3LNvg8klDScM");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
