@@ -80,24 +80,24 @@
 
 
 
-<meta name="description" content="##问题在看Java Web 深入分析时, 看到表单重复提交问题一节, 如下描述如何解决问题:
+<meta name="description" content="问题在看Java Web 深入分析时, 看到表单重复提交问题一节, 如下描述如何解决问题:
 
-要防止表单重复提交, 就要标识用户的每一次访问请求, 使得每一次访问对服务端来说都是唯一的. 为了标识用户的每次访问请求, 可以在用户请求一个表单域时,增加一个隐藏的表单项, 这个表单项的值每一次都是唯一的token. 如:&amp;lt;form id = &amp;quot;form&amp;quot; method=&amp;">
+要防止表单重复提交, 就要标识用户的每一次访问请求, 使得每一次访问对服务端来说都是唯一的. 为了标识用户的每次访问请求, 可以在用户请求一个表单域时,增加一个隐藏的表单项, 这个表单项的值每一次都是唯一的token. 如:&amp;lt;form id = &amp;quot;form&amp;quot; method=&amp;qu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="表单重复提交问题">
 <meta property="og:url" content="http://yoursite.com/2016/05/09/表单重复提交问题/index.html">
 <meta property="og:site_name" content="oncealong's Notes">
-<meta property="og:description" content="##问题在看Java Web 深入分析时, 看到表单重复提交问题一节, 如下描述如何解决问题:
+<meta property="og:description" content="问题在看Java Web 深入分析时, 看到表单重复提交问题一节, 如下描述如何解决问题:
 
-要防止表单重复提交, 就要标识用户的每一次访问请求, 使得每一次访问对服务端来说都是唯一的. 为了标识用户的每次访问请求, 可以在用户请求一个表单域时,增加一个隐藏的表单项, 这个表单项的值每一次都是唯一的token. 如:&amp;lt;form id = &amp;quot;form&amp;quot; method=&amp;">
+要防止表单重复提交, 就要标识用户的每一次访问请求, 使得每一次访问对服务端来说都是唯一的. 为了标识用户的每次访问请求, 可以在用户请求一个表单域时,增加一个隐藏的表单项, 这个表单项的值每一次都是唯一的token. 如:&amp;lt;form id = &amp;quot;form&amp;quot; method=&amp;qu">
 <meta property="og:image" content="http://7xspji.com2.z0.glb.clouddn.com/blog/form_multi_submit/form_multi_submmit.png">
 <meta property="og:image" content="http://7xspji.com2.z0.glb.clouddn.com/blog/form_multi_submit/form_multi_submmit_verify.png">
-<meta property="og:updated_time" content="2016-05-09T05:03:13.788Z">
+<meta property="og:updated_time" content="2016-05-09T05:10:18.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="表单重复提交问题">
-<meta name="twitter:description" content="##问题在看Java Web 深入分析时, 看到表单重复提交问题一节, 如下描述如何解决问题:
+<meta name="twitter:description" content="问题在看Java Web 深入分析时, 看到表单重复提交问题一节, 如下描述如何解决问题:
 
-要防止表单重复提交, 就要标识用户的每一次访问请求, 使得每一次访问对服务端来说都是唯一的. 为了标识用户的每次访问请求, 可以在用户请求一个表单域时,增加一个隐藏的表单项, 这个表单项的值每一次都是唯一的token. 如:&amp;lt;form id = &amp;quot;form&amp;quot; method=&amp;">
+要防止表单重复提交, 就要标识用户的每一次访问请求, 使得每一次访问对服务端来说都是唯一的. 为了标识用户的每次访问请求, 可以在用户请求一个表单域时,增加一个隐藏的表单项, 这个表单项的值每一次都是唯一的token. 如:&amp;lt;form id = &amp;quot;form&amp;quot; method=&amp;qu">
 
 
 
@@ -360,17 +360,17 @@
       
 
       
-        <p>##问题<br>在看<strong>Java Web 深入分析</strong>时, 看到<strong>表单重复提交问题</strong>一节, 如下描述如何解决问题:</p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在看<strong>Java Web 深入分析</strong>时, 看到<strong>表单重复提交问题</strong>一节, 如下描述如何解决问题:</p>
 <blockquote>
 <p>要防止表单重复提交, 就要标识用户的每一次访问请求, 使得每一次访问对服务端来说都是唯一的. 为了标识用户的每次访问请求, 可以在用户请求一个表单域时,增加一个隐藏的表单项, 这个表单项的值每一次都是唯一的token. 如:<br><code>&lt;form id = &quot;form&quot; method=&quot;post&quot;&gt;</code><br><code>&lt;input type=hidden name=&quot;crsf_token&quot; value=&quot;XXX&quot;&gt;</code><br><code>&lt;/form&gt;</code><br>当客户在请求时生成这个唯一的token时, 同时将这个token保存在用户的Session中, 等用户提交请求时检查这个token和当前的Session中保存的是否一致. 如果一致, 则说明没有重复提交, 否则用户提交上来的token已经不是当前这个请求的合法token.</p>
 </blockquote>
 <p>流程图如下:<br><img src="http://7xspji.com2.z0.glb.clouddn.com/blog/form_multi_submit/form_multi_submmit.png" alt="请求时生成带有token的表单"><br>但是让我迷惑的是: 访问服务器时获得唯一的token标识, 然后提交时带上这个标志, 服务器检测是否和自己Session中的内容一致. 为什么这样就可以防止重复提交? 我提交的第二次, 第三次还是带有相同的token啊, 服务器检测Session中的内容应该还是一致的. 为什么可以防止重复提交?</p>
-<p>##解决<br>然后上网查了下资料, 发现应该是作者少提了一点: <strong>处理前移除Session中指定token</strong>.<br>就是说当服务器第一次收到客户端提交时, Session中是能检测到token的, 然后在准备处理时, 应该先移除Session中的指定token. 这样下一次客户端再次提交, 服务器检测token就会发现Session中没有对应token. 就可以拒绝服务.</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>然后上网查了下资料, 发现应该是作者少提了一点: <strong>处理前移除Session中指定token</strong>.<br>就是说当服务器第一次收到客户端提交时, Session中是能检测到token的, 然后在准备处理时, 应该先移除Session中的指定token. 这样下一次客户端再次提交, 服务器检测token就会发现Session中没有对应token. 就可以拒绝服务.</p>
 <blockquote>
 <p>remove if exist  //如果存在, 那么移除</p>
 </blockquote>
 <p>流程图如下:<br><img src="http://7xspji.com2.z0.glb.clouddn.com/blog/form_multi_submit/form_multi_submmit_verify.png" alt="提交时验证token"></p>
-<p>##优化<br>然后又想到了有没有什么优化措施, 可以减缓服务器的压力. </p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>然后又想到了有没有什么优化措施, 可以减缓服务器的压力. </p>
 <p>服务端的事情没有办法减少, 那么就从客户端入手, 当客户端重复提交时, 通过JavaScript脚本阻止用户提交. 当客户提交表格时, 可以通过JavaScript脚本里的变量来表示用户是否提交. 当然这种方法不可以绝对相信, 黑客可以伪造数据来通过这个检测. 所以服务器端的检测还是必不可少的, 但是可以大幅度减少用户无意识的多次提交表单, 从而减轻服务器压力.</p>
 <pre><code>&lt;script&gt;
 var isCommitted=false;
@@ -549,7 +549,7 @@ function checkPost()
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">3.</span> <span class="nav-text">优化</span></a></li></ol></div>
             
           </div>
         </section>
