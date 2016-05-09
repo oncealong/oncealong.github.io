@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="IT之家,博客,电脑," />
+  <meta name="keywords" content="Android,YPlayer播放器," />
 
 
 
@@ -80,16 +80,16 @@
 
 
 
-<meta name="description" content="长期下滑难免让人心生颓丧，但只有抓住市场结构变化机会，才能真正迎来PC的春天。上一个季度，PC全球出货量再次迎来大幅下滑，这已是PC连续第五个季度下滑。业界一片哀鸿，全球前5大PC厂商中，只有少数品牌实现逆势增长，排名第一的联想当季营业额、税前利润均出现两位数下滑。PC是夕阳行业？你们图样图森破PC厂商或许进入到了生死攸关“淘汰赛”，IDC分析师汤姆·麦内利(TomMainelli)指出，在当前5">
+<meta name="description" content="MediaStore这个类是Android系统提供的一个多媒体数据库，android中多媒体信息都可以从这里提取。这个MediaStore包括了多媒体数据库的所有信息，包括音频，视频和图像。android把所有的多媒体数据库接口进行了封装，所有的数据库不用自己进行创建，直接利用ContentResolver去调用那些封装好的接口就可以进行数据库的操作了。今天我就介绍一些这些接口的用法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PC是夕阳行业？你们图样图森破">
-<meta property="og:url" content="http://yoursite.com/2016/02/24/PC是夕阳行业？你们图样图森破/index.html">
+<meta property="og:title" content="MediaStore与Media.EXTERNAL_CONTENT_URI">
+<meta property="og:url" content="http://yoursite.com/2016/05/04/MediaStore 与Media.EXTERNAL_CONTENT_URI/index.html">
 <meta property="og:site_name" content="oncealong's Notes">
-<meta property="og:description" content="长期下滑难免让人心生颓丧，但只有抓住市场结构变化机会，才能真正迎来PC的春天。上一个季度，PC全球出货量再次迎来大幅下滑，这已是PC连续第五个季度下滑。业界一片哀鸿，全球前5大PC厂商中，只有少数品牌实现逆势增长，排名第一的联想当季营业额、税前利润均出现两位数下滑。PC是夕阳行业？你们图样图森破PC厂商或许进入到了生死攸关“淘汰赛”，IDC分析师汤姆·麦内利(TomMainelli)指出，在当前5">
-<meta property="og:updated_time" content="2016-02-24T03:26:28.541Z">
+<meta property="og:description" content="MediaStore这个类是Android系统提供的一个多媒体数据库，android中多媒体信息都可以从这里提取。这个MediaStore包括了多媒体数据库的所有信息，包括音频，视频和图像。android把所有的多媒体数据库接口进行了封装，所有的数据库不用自己进行创建，直接利用ContentResolver去调用那些封装好的接口就可以进行数据库的操作了。今天我就介绍一些这些接口的用法。">
+<meta property="og:updated_time" content="2016-05-04T13:53:57.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PC是夕阳行业？你们图样图森破">
-<meta name="twitter:description" content="长期下滑难免让人心生颓丧，但只有抓住市场结构变化机会，才能真正迎来PC的春天。上一个季度，PC全球出货量再次迎来大幅下滑，这已是PC连续第五个季度下滑。业界一片哀鸿，全球前5大PC厂商中，只有少数品牌实现逆势增长，排名第一的联想当季营业额、税前利润均出现两位数下滑。PC是夕阳行业？你们图样图森破PC厂商或许进入到了生死攸关“淘汰赛”，IDC分析师汤姆·麦内利(TomMainelli)指出，在当前5">
+<meta name="twitter:title" content="MediaStore与Media.EXTERNAL_CONTENT_URI">
+<meta name="twitter:description" content="MediaStore这个类是Android系统提供的一个多媒体数据库，android中多媒体信息都可以从这里提取。这个MediaStore包括了多媒体数据库的所有信息，包括音频，视频和图像。android把所有的多媒体数据库接口进行了封装，所有的数据库不用自己进行创建，直接利用ContentResolver去调用那些封装好的接口就可以进行数据库的操作了。今天我就介绍一些这些接口的用法。">
 
 
 
@@ -107,7 +107,7 @@
   };
 </script>
 
-  <title> PC是夕阳行业？你们图样图森破 | oncealong's Notes </title>
+  <title> MediaStore与Media.EXTERNAL_CONTENT_URI | oncealong's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
             
             
               
-                PC是夕阳行业？你们图样图森破
+                MediaStore与Media.EXTERNAL_CONTENT_URI
               
             
           </h1>
@@ -289,19 +289,38 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-24T11:09:43+08:00" content="2016-02-24">
-              2016-02-24
+            <time itemprop="dateCreated" datetime="2016-05-04T19:32:13+08:00" content="2016-05-04">
+              2016-05-04
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/YPlayer播放器/" itemprop="url" rel="index">
+                    <span itemprop="name">YPlayer播放器</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/24/PC是夕阳行业？你们图样图森破/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/PC是夕阳行业？你们图样图森破/" itemprop="commentsCount"></span>
+                <a href="/2016/05/04/MediaStore 与Media.EXTERNAL_CONTENT_URI/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/04/MediaStore 与Media.EXTERNAL_CONTENT_URI/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -311,7 +330,7 @@
 
           
           
-             <span id="/2016/02/24/PC是夕阳行业？你们图样图森破/" class="leancloud_visitors" data-flag-title="PC是夕阳行业？你们图样图森破">
+             <span id="/2016/05/04/MediaStore 与Media.EXTERNAL_CONTENT_URI/" class="leancloud_visitors" data-flag-title="MediaStore与Media.EXTERNAL_CONTENT_URI">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -333,7 +352,32 @@
       
 
       
-        <p>长期下滑难免让人心生颓丧，但只有抓住市场结构变化机会，才能真正迎来PC的春天。<br>上一个季度，PC全球出货量再次迎来大幅下滑，这已是PC连续第五个季度下滑。业界一片哀鸿，全球前5大PC厂商中，只有少数品牌实现逆势增长，排名第一的联想当季营业额、税前利润均出现两位数下滑。<br>PC是夕阳行业？你们图样图森破<br>PC厂商或许进入到了生死攸关“淘汰赛”，IDC分析师汤姆·麦内利(TomMainelli)指出，在当前5到10名的厂商中，很可能会有两家退出市场。真的已经无可救药吗?去年最后一个季度的销售旺季，并没有刺激PC出现回升。<br>经过激烈的角逐，PC行业会不会随着部分厂商退出，回归到“利润回升，竞争格局相对稳定”的阶段？清华同方电脑市场部副总经理刘杰鹏向记者表示，这只是正常的行业规律和时间问题。<br>行业正常洗牌<br>“PC行业发展到现在正在经历价格战、低利润血拼阶段，但每个行业都会经历这个阶段，在我看来，这只是正常的竞争态势。”刘杰鹏表示。<br>根据IDC数据，2015年第四季度，全球个人电脑(PC)出货量同比下滑10.6%，跌至7190万台，创下了“历史新纪录”。Gartner公布的数据是8.3%。<br>不过，IDC预计全球PC市场将于2016年见底，全年降幅缩小至1.1%.<br>助推PC市场见底的因素是最新技术应用叠加的“换机潮”，英特尔推出了最新的第六代酷睿处理器，微软新的Windows10操作系统已上线，加上4K显示屏等新技术，将大幅提升PC性能和体验。此外，从2012到2016年，PC经历了连续五年的放缓过程，如果说该离开的用户都已经离开，使用6年的机器到了更新换代期，PC整体市场难以大幅下跌。<br>但这并不意味着所有PC厂商都能度过难关。Gartner数据显示，2015年，前六大厂商在整体PC市场的占有率更见提升，达73.1%，高于2014年的70.4%。<br>谁“毁”了PC产业？或许“毁”掉PC产业的是一种模式，为追求市场占有率和销量而不断拉低利润，以价格战恶化行业生态的模式。2012到2013财年，联想的日子仍然相当好过，当年毛利率达到12%，然而到截至2015年12月31日的这个财季，联想毛利率已降至5%。<br>或许只有经过激烈洗牌导致大量玩家出局，市场才会恢复平衡。汽车产业一度和PC产业现状类似，最终市场回到了少数几家厂商手中。<br>“在当前市场形势下，巨头的份额无疑也受到影响，加上华为进入，一些巨头也可能感到‘焦灼’，但市场的下滑实际并不影响这些巨头在全球的垄断地位，市场只会越来越集中。在我看来，日本的一家PC厂商，出局是确定的。”刘杰鹏说。<br>一个“夕阳产业”?<br>事实上，虽然整体市场仍未结束下滑，在PC部分局部市场却出现逆势增长。<br>“我们看到，消费信息的(PC)终端产品形态发生了变化，但生产信息的终端需求反而是越来越大了。”刘杰鹏说。<br>大量机会出现在商用PC领域。“部分用户对于类工作站的个人电脑需求还是很强劲，例如自媒体、设计工作者、游戏开发者。这确实也给我们提出一些挑战，对性能、外观、散热提出更高的要求。”刘杰鹏说。<br>商用PC也有细分领域，例如，在教育市场，对以服务器+云盒子新模式的需求强劲。而针对部分只需处理简单功能的“窗口行业”，例如呼叫中心，此类行业对特殊PC的需求也在增加。普通计算机方面，“拥有信息安全属性的产品，在政府、金融、军队的采购，一定会有很好的市场份额，只是不好预测产生质变的时间点。”刘杰鹏告诉记者。<br>“PC走到了一个十字路口，”刘杰鹏说，“标准化的PC是巨头的天下，而且会越来越集中。但面对细分市场需求的PC厂商，还会活得很好。”实际上，即使在不被人们看好的个人PC领域，针对游戏群体开发的PC，其需求也在上升，而这类PC也拥有不错的利润。<br>“我们认为移动办公领域的需求不会消亡，会一直存在，并且这种需求会越来越强烈。”华为移动宽带与家庭事业部的总裁杨志荣在出席MateBook新品发布时也表示。<br>新进入PC行业的华为也在反思传统PC盛衰。杨志荣说：“原来传统的PC是一个负循环，拼命压成本、压价格，把质量做差，消费者觉得这个产品5年是一个样子，没有兴趣换代，这样消费者不买单，厂家更没钱。现在最重要是让这个行业进入正循环，首先在产品这块，要进行创新。”</p>
+        <p>MediaStore这个类是Android系统提供的一个多媒体数据库，android中多媒体信息都可以从这里提取。这个MediaStore包括了多媒体数据库的所有信息，包括音频，视频和图像。<br>android把所有的多媒体数据库接口进行了封装，所有的数据库不用自己进行创建，直接利用ContentResolver去调用那些封装好的接口就可以进行数据库的操作了。<br>今天我就介绍一些这些接口的用法。    </p>
+<ol>
+<li>首先，要得到一个ContentResolver实例，ContentResolver可以这样获取，利用一个Activity或者Service的Context即可。如下所示：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver mResolver = ctx.getContentResolver();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>上面的那个ctx的就是一个context，Activity.this就是Context，这个Context就相当于一个上下文环境。<br>得到这个Context后就可以调用getContentResolver接口获取ContentResolver实例了。</p>
+<ol>
+<li>获得ContentResolver实例后，就可以进行各种查询，下面我就以音频数据库为例讲解增删改查的方法，视频和图像和音频非常类似。<br>在讲解各种查询之前，我给大家介绍下怎么看android都提供了哪些多媒体表。在adbshell中，找到<code>/data/data/com.android.providers.media/databases/</code>下，然后找到SD卡的数据库文件(一般是一个.db文件)，然后输入命令sqlite3加上这个数据库的名字就可以查询android的多媒体数据库了。<br>.table命令可以列出所有多媒体数据库的表，.scheme加上表名可以查询表中的所有列名。这里可以利用SQL语句来查看你想要的数据，记得最后一定要记住每条语句后面都加上分号。<br>下面开始讲述怎么在这些表上进行增删改查。<br>###查询<br>代码如下：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cursor cursor = resolver.query(uri, prjs, selections, selectArgs, order);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>ContentResolver的query方法接受几个参数，参数意义如下:</p>
+<blockquote>
+<p>uri：这个Uri代表要查询的数据库名称加上表的名称。这个Uri一般都直接从MediaStore里取得，例如我要取所有歌的信息，就必须利用<code>MediaStore.Audio.Media.EXTERNAL_CONTENT_URI</code>这个Uri。专辑信息要利用<code>MediaStore.Audio.Albums.EXTERNAL_CONTENT_URI</code>这个Uri来查询，其他查询也都类似。</p>
+<p>prjs：这个参数代表要从表中选择的列，用一个String数组来表示。</p>
+<p>selections：相当于SQL语句中的where子句，就是代表你的查询条件。</p>
+<p>selectArgs：这个参数是说你的Selections里有？这个符号是，这里可以以实际值代替这个问号。如果Selections这个没有？的话，那么这个String数组可以为null。</p>
+<p>order：说明查询结果按什么来排序。</p>
+</blockquote>
+<p> 上面就是各个参数的意义，它返回的查询结果一个Cursor，这个Cursor就相当于数据库查询的中Result，用法和它差不多。</p>
+<p> ###增加<br>代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ContentValues values = <span class="keyword">new</span> ContentValues();</span><br><span class="line">values.put(MediaStore.Audio.Playlists.Members.PLAY_ORDER,<span class="number">0</span>);</span><br><span class="line">resolver.insert(_uri, values);</span><br></pre></td></tr></table></figure></p>
+<p>这个insert传递的参数只有两个，一个是Uri(同查询那个Uri)，另一个是ContentValues。这个ContentValuses对应于数据库的一行数据，只要用put方法把每个列的设置好之后，直接利用insert方法去插入就好了。</p>
+<p>  ###更新<br>  代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver resolver = ctx.getContentResolver();</span><br><span class="line">Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;</span><br><span class="line">ContentValues values = <span class="keyword">new</span> ContentValues();</span><br><span class="line">values.put(MediaStore.Audio.Media.DATE_MODIFIED, sid);</span><br><span class="line">resolver.update(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI,values, where, selectionArgs);</span><br></pre></td></tr></table></figure></p>
+<p>上面update方法和查询还有增加里的参数都很类似，这里就不再重复叙述了，大家也可直接参考google的文档，那里也写的很清楚。</p>
+<p>  ###删除<br>代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver resolver = ctx.getContentResolver();</span><br><span class="line">resolver.delete(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI,where, selectionArgs);</span><br></pre></td></tr></table></figure></p>
+<p>delete和更新的方法很类似，大家对照更新的方法看下马上就会明白。</p>
+<p>[转自: <a href="http://blog.csdn.net/jdsjlzx/article/details/9080235" target="_blank" rel="external">http://blog.csdn.net/jdsjlzx/article/details/9080235</a>]</p>
 
       
     </div>
@@ -354,11 +398,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/IT之家/" rel="tag">#IT之家</a>
+            <a href="/tags/Android/" rel="tag">#Android</a>
           
-            <a href="/tags/博客/" rel="tag">#博客</a>
-          
-            <a href="/tags/电脑/" rel="tag">#电脑</a>
+            <a href="/tags/YPlayer播放器/" rel="tag">#YPlayer播放器</a>
           
         </div>
       
@@ -367,12 +409,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/05/04/因为Android M的新权限管理而导致的Permission Denial reading com.android.providers.media.MediaProvider/" rel="next" title="Permission Denial: reading com.android.providers.media.MediaProvider">
+                <i class="fa fa-chevron-left"></i> Permission Denial: reading com.android.providers.media.MediaProvider
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/03/My-second-text/" rel="prev" title="My second text">
-                My second text <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/04/YPlayer1-起始/" rel="prev" title="YPlayer1:起始">
+                YPlayer1:起始 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -399,8 +445,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/24/PC是夕阳行业？你们图样图森破/"
-           data-title="PC是夕阳行业？你们图样图森破" data-url="http://yoursite.com/2016/02/24/PC是夕阳行业？你们图样图森破/">
+      <div class="ds-thread" data-thread-key="2016/05/04/MediaStore 与Media.EXTERNAL_CONTENT_URI/"
+           data-title="MediaStore与Media.EXTERNAL_CONTENT_URI" data-url="http://yoursite.com/2016/05/04/MediaStore 与Media.EXTERNAL_CONTENT_URI/">
       </div>
     
   </div>
@@ -445,7 +491,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -453,7 +499,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -462,7 +508,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
