@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android," />
+  <meta name="keywords" content="Android and Java" />
 
 
 
@@ -80,20 +80,15 @@
 
 
 
-<meta name="description" content="Google官网给的Activity声明周期图:
-从这种图中,我们可以知道Activity生命周期是:onCreate -&amp;gt; onStart -&amp;gt; onResume -&amp;gt; onPause -&amp;gt; onStop -&amp;gt;onDestroy.更详细一点就是 onCreate是ActivityA创建时调用, onStart是用户能看见ActivityA时调用(但是不可以交互),">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Android 生命周期中每个函数适合处理的事件">
-<meta property="og:url" content="http://yoursite.com/2016/05/03/Android 生命周期中每个函数适合处理的事件/index.html">
+<meta name="description" content="唯代码和妹子不可辜负">
+<meta property="og:type" content="website">
+<meta property="og:title" content="oncealong's Notes">
+<meta property="og:url" content="http://yoursite.com/tags/最佳实践/index.html">
 <meta property="og:site_name" content="oncealong's Notes">
-<meta property="og:description" content="Google官网给的Activity声明周期图:
-从这种图中,我们可以知道Activity生命周期是:onCreate -&amp;gt; onStart -&amp;gt; onResume -&amp;gt; onPause -&amp;gt; onStop -&amp;gt;onDestroy.更详细一点就是 onCreate是ActivityA创建时调用, onStart是用户能看见ActivityA时调用(但是不可以交互),">
-<meta property="og:image" content="http://7xspji.com2.z0.glb.clouddn.com/blog/android/activity_lifecycle.png">
-<meta property="og:updated_time" content="2016-05-03T04:32:15.182Z">
+<meta property="og:description" content="唯代码和妹子不可辜负">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android 生命周期中每个函数适合处理的事件">
-<meta name="twitter:description" content="Google官网给的Activity声明周期图:
-从这种图中,我们可以知道Activity生命周期是:onCreate -&amp;gt; onStart -&amp;gt; onResume -&amp;gt; onPause -&amp;gt; onStop -&amp;gt;onDestroy.更详细一点就是 onCreate是ActivityA创建时调用, onStart是用户能看见ActivityA时调用(但是不可以交互),">
+<meta name="twitter:title" content="oncealong's Notes">
+<meta name="twitter:description" content="唯代码和妹子不可辜负">
 
 
 
@@ -111,7 +106,7 @@
   };
 </script>
 
-  <title> Android 生命周期中每个函数适合处理的事件 | oncealong's Notes </title>
+  <title> 标签: 最佳实践 | oncealong's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -142,7 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -260,171 +255,46 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Android 生命周期中每个函数适合处理的事件
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-03T12:26:41+08:00" content="2016-05-03">
-              2016-05-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/03/Android 生命周期中每个函数适合处理的事件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/03/Android 生命周期中每个函数适合处理的事件/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/05/03/Android 生命周期中每个函数适合处理的事件/" class="leancloud_visitors" data-flag-title="Android 生命周期中每个函数适合处理的事件">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>Google官网给的Activity声明周期图:<br><img src="http://7xspji.com2.z0.glb.clouddn.com/blog/android/activity_lifecycle.png" alt="Activity声明周期"></p>
-<p>从这种图中,我们可以知道Activity生命周期是:<br>onCreate -&gt; onStart -&gt; onResume -&gt; onPause -&gt; onStop -&gt;onDestroy.<br>更详细一点就是 onCreate是ActivityA创建时调用, onStart是用户能看见ActivityA时调用(但是不可以交互), onResume是用户与ActivityA可交互时调用. 当另外一个ActivityB弹出(比如广告),遮盖住ActivityA一部分时, 调用ActivityA的OnPause方法(因为此时ActivityA不能交互了), 然后调用ActivityB的onCreate, onStart, onResume方法. 如果此时ActivityB整个遮盖住了ActivityA, 就会调用ActivityA的onStop方法(因为此时ActivityA不能看到了). 如果用户彻底退出应用, 就会执行ActivityA的 onDestroy方法.<br>再详细一点就要涉及到activity的状态了.因为一个activity有<a href="http://developer.android.com/guide/components/activities.html#Lifecycle" target="_blank" rel="external">三个状态</a>,分别为:</p>
-<ul>
-<li>Resumed</li>
-<li>Paused</li>
-<li>Stopped<br>通过调用onCreate, onStart, onResum, onPause, onStop, onDestroy就可以在这些状态间转换.</li>
-</ul>
-<p>但是在每个方法里,都适合做些什么任务呢?<br>在谷歌<a href="http://developer.android.com/reference/android/app/Activity.html" target="_blank" rel="external">官方文档</a>中,这样说道每个方法的作用:</p>
-<ol>
-<li>onCreate:<br>当activity第一次创建时调用.这里应该完成所有静态资源的建立, 比如使用setContentView(int)和布局资源定义你的UI视图, 使用findViewById(int)取出程序中需要交互的控件, 绑定数据.<br>此时视图还不存在,无法调用动画等.<br>还有需要注意, 每次activity启动, 不一定都会调用这个函数. 当当前activity只是被覆盖一部分, 当前activity再次可交互时,是只调用onResume方法, 不会调用onCreate方法.</li>
-<li>onStart:<br>这里不是activity对用户是否可见的最好的指示器</li>
-<li>onResume:<br>打开独占设备,如相机,在onPause中释放.</li>
-<li>onPause:<br>在这里系统将要离开当前Activity, 恢复其他activity. 用户在程序里做的任何改变都应该在此刻提交(通常用ContentProvide来保存数据). 还有需要在这里停止动画和其他耗费CPU的事件来确保转换到下一个activity的流畅度.<br>请记住:这个方法的实现必须很快完成, 不能占用太多时间, 因为在这个方法完成之前, 下一个activity不会恢复. 如果这个方法耗时较长, 就会影响用户体验. 如果对应的onPause()在500ms内还没有执行完，ActivityManagerService就会强制关闭这个Activity.<br>另外一个请记住的是:如果当前activity拥有独占资源(比如相机), 必须在这里释放, 以免在下一个activity中需要用到.</li>
-<li>onStop:<br>请注意: 在内存不足而导致系统无法保留此进程的情况下, onStop() 可能不会被执行。</li>
-</ol>
-<p>几乎所有Activity的子类,都会实现onCreate和onPause这两个方法.</p>
-<p>另一篇讲的很赞的文章:<br><a href="http://blog.csdn.net/zhao_3546/article/details/12843477" target="_blank" rel="external">http://blog.csdn.net/zhao_3546/article/details/12843477</a></p>
-
-      
-    </div>
-    
-    <div>
-      
-        
-      
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        最佳实践
+        <small>标签</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-      
-    </div>
+            <a class="post-title-link" href="/2016/05/09/Android开发最佳实践---Futurice/" itemprop="url">
+              
+                <span itemprop="name">Android开发最佳实践---Futurice</span>
+              
+            </a>
+        
+      </h1>
 
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Android/" rel="tag">#Android</a>
-          
-        </div>
-      
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-05-09T12:26:41+08:00"
+              content="2016-05-09" >
+          05-09
+        </time>
+      </div>
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/04/MediaStore 与Media.EXTERNAL_CONTENT_URI/" rel="prev" title="MediaStore与Media.EXTERNAL_CONTENT_URI">
-                MediaStore与Media.EXTERNAL_CONTENT_URI <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
+
+  
 
 
           </div>
@@ -432,14 +302,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/05/03/Android 生命周期中每个函数适合处理的事件/"
-           data-title="Android 生命周期中每个函数适合处理的事件" data-url="http://yoursite.com/2016/05/03/Android 生命周期中每个函数适合处理的事件/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -459,17 +321,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xspji.com2.z0.glb.clouddn.com/pic/me/wqDH.jpg"
@@ -519,17 +372,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -633,10 +475,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
